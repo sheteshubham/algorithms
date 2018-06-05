@@ -1,31 +1,24 @@
 package com.shubham.algorithms;
 
-/**
- * 
- * @author zippo
- *
- */
+
 public class BubbleSort {
 
-	/**
-	 * 
-	 * @param input
-	 * @return
-	 */
-	public int[] sort(int[] input) {
+	
+	public static void main(String[]args){
 		
-		for (int i : input) {
-			System.out.println(i);
+		int[] a={19,13,16,17,14,9,15,10,11};
+		int k=0;
+		for(int j=0;j<8;j++){	
+			for(int i=0;i<8;i++){
+			if(a[i]>a[i+1]){
+				k=a[i];
+				a[i]=a[i+1];
+				a[i+1]=k;
+			}
 		}
-		return null;
 	}
-	
-
-	public static void main(String[] args) {
-		
-		int[] input = {3,75,3,2,6,7,9,45,78,32};
-		BubbleSort bubbleSort = new BubbleSort();
-		int[] output = bubbleSort.sort(input);
+			for(int s=0;s<9;s++){
+			System.out.println("."+a[s]);
+			}
+		}
 	}
-	
-}
